@@ -2,37 +2,54 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+span {
+  font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-header {
+  height: 125px;
+  background: #3B3B3B;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-sizing: border-box;
+  padding: 0px 25px;
+}
+
+.main-header img {
+  height: 75px;
+}
+
+.main-header nav {
+  width: 350px;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.animation-transition {
+  height: calc(100vh - 125px);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.react-logo {
+  height: 400px;
+}
+
+.transition-circle {
+  height: 325px;
+  width: 325px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 5px solid #16D8FF;
+  color: #16D8FF;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
