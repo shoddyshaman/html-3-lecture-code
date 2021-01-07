@@ -3,17 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      dropdownView: false
-    }
-  }
-
-  toggleDropdown = () => {
-    this.setState({dropdownView: !this.state.dropdownView})
-  }
-
   render(){
     return (
       <div className="App">
@@ -25,15 +14,6 @@ class App extends Component {
             <span>Contact</span>
           </nav>
           <div className='dropdown' onClick={this.toggleDropdown}>Menu</div>
-          {this.state.dropdownView
-            ? (
-              <nav className='mobile-menu'>
-                <span>Home</span>
-                <span>About</span>
-                <span>Contact</span>
-              </nav>
-            )
-            : null}
         </header>
         <section className='animation-transition'>
           <img className='react-logo' src={logo} alt='React.js'/>
