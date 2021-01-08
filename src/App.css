@@ -46,6 +46,10 @@ span {
 
 .react-logo {
   height: 400px;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .transition-circle {
@@ -60,4 +64,79 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 2s;
+}
+
+.transition-circle:hover {
+  transform: scale(.5) rotate(360deg);
+  border-radius: 0%;
+  background:#3B3B3B;
+  color:white;
+}
+
+@media(max-width: 768px){
+  .main-header img{
+    height: 50px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .dropdown {
+    display:initial;
+    font-size: 25px;
+    cursor: pointer;
+
+  }
+
+  .mobile-menu {
+    display: initial;
+    height:250px;
+    width:250px;
+    background:#3B3B3B;
+    color:white;
+    position:fixed;
+    right: 0;
+    top:125px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+  }
+}
+
+@media(max-width: 570px){
+  .main-header img{
+    height: 35px;
+  }
+
+  .react-logo {
+    height: 250px;
+  }
+
+  .transition-circle {
+    height: 200px;
+    width:200px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    /* transform:scale(1); */
+    /* transform: scale(1) skewX(20deg) rotate(0deg) translate(0,0); */
+    /* transform: rotate(0deg) */
+    /* transform: translate(0,0) */
+  }
+  50% {
+    /* transform:scale(2); */
+    /* transform: scale(2) skewX(-20deg) rotate(180deg) translate(100px, 50px); */
+    /* transform: rotate(180deg) */
+    /* transform: translate(100px, 50px) */
+  }
+  100% {
+    /* transform:scale(1); */
+    /* transform: scale(1) skewX(20deg) rotate(360deg) translate(0,0); */
+    /* transform: rotate(360deg) */
+    /* transform: translate(0,0) */
+  }
 }
